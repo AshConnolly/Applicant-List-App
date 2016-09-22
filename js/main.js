@@ -26,28 +26,13 @@ var ApplicantListApp = React.createClass({
     },
 
     addApplicant: function addApplicant(applicant) {
-        //update state object
-        //this.state.applicants['applicant-' + timestamp] = this.refs.input.value;
+    
         this.state.applicants['applicant-' + new Date().getTime()] = applicant;
-        //set the state
         this.setState({ applicants: this.state.applicants });
-        //console.table(this.state.applicants);
     },
 
-    // handleKeyPress : function (target) {
-    //  if (target.charCode == 13) {
-    //  var timestamp = (new Date()).getTime();
-    //  //update state - [content] is the object key, after '=' is the value
-    //  this.state.applicants['applicant-' + timestamp] = this.refs.input.value;
-    //  //set the state
-    //  this.setState({applicants: this.state.applicants});
-    //  //reset input
-    //  this.refs.input.value = "";         
-    //  }
-    // },
 
     renderList: function renderList(key) {
-        // render html return ( <li key={key} >{this.state.applicants[key]} </li>)
         return React.createElement(Applicant, { key: key, index: key, applicantDetails: this.state.applicants[key] });
     },
 
@@ -100,9 +85,7 @@ var ApplicantInput = React.createClass({
 
     handleKeyPress: function handleKeyPress(target) {
         if (target.charCode == 13) {
-            //using the component property 'addApplicantToRoot' we are passing the value up to the root app
             this.props.addApplicantToRoot(this.refs.input.value);
-            //reset input           
             this.refs.input.value = "";
         }
     },

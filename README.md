@@ -13,3 +13,5 @@ Once all node modules have been downloaded, from the project directory run
 gulp
 ```
 This will use gulp browsersync, this will spin up an express server locally, it will auto inject any css changes made to main.scss and will auto refresh the page when changes are made to any html files.
+
+If you wish to inspect the React DOM, you can download [React Developer Tools](https://facebook.github.io/react/blog/2015/09/02/new-react-developer-tools.html)

@@ -1,6 +1,6 @@
 # Applicant List App
 
-To run the app you will need to install all relevant node modules and dependencies. Navigate to the folder directory in terminal and type
+To run the app you will need to install all relevant node modules and dependencies. Navigate to the root of the project directory in terminal and type
 ```
 npm install
 ```

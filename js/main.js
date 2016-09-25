@@ -18,7 +18,7 @@ var MainLayout = React.createClass({
     },*/
     
     renderList : function (key) {
-        return ( <Applicant key={key} index={key} applicantDetails={this.props.route.applicants[key].name}/>)
+        return ( <Applicant key={key} index={key} applicantDetails={this.props.route.applicants[key]}/>)
     },
     
     render: function() {
@@ -49,7 +49,7 @@ var Applicant = React.createClass ({
 	},
     render : function () {
         return(            
-                <li><a className="applicant" onClick={this.goToApplicant}>{this.props.applicantDetails}</a></li>       
+                <li><a className="applicant" onClick={this.goToApplicant}>{this.props.applicantDetails.name}</a></li>       
            
         )
     }
@@ -237,27 +237,27 @@ var App = React.createClass({
                 },
                 applicant_2 : {
                     name : 'Doris Brazier',
-                    dob : '24/08/1986',
+                    dob : '12/05/1975',
                     experience : 'Proin leo sem, tristique ac molestie a, condimentum eget elit. Proin aliquam eget augue eu congue. Ut fermentum dapibus purus, ac varius libero lacinia sed. Etiam lobortis odio neque, eu ullamcorper erat semper id. Mauris sit amet erat lectus. Fusce ornare, massa at sagittis iaculis, mauris massa dapibus nibh, sit amet fringilla diam ligula id massa. In interdum convallis tellus, semper bibendum sapien. Ut ac justo a felis bibendum ultrices non sed justo. Proin tincidunt suscipit erat, et porta urna fermentum nec. Aliquam erat volutpat. Maecenas vitae placerat lectus. Cras non sem vel tortor fringilla finibus. Duis vitae sapien nulla. Maecenas id egestas dolor.',
                 },
                 applicant_3 : {
                     name : 'Harry Stevenson',
-                    dob : '24/08/1987',
+                    dob : '17/10/1958',
                     experience : 'Vivamus accumsan mattis lacinia. Sed porta interdum placerat. Integer a tincidunt lorem. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nullam a purus id velit dapibus gravida. Curabitur efficitur ligula vel enim consectetur posuere. Duis porta ut justo sed finibus. Etiam suscipit, nisi a tempus mollis, tortor tellus vulputate felis, eget malesuada odio ante in sem. Fusce posuere aliquet velit, vitae molestie nibh convallis sit amet. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce et faucibus arcu, sed finibus nisl. Integer malesuada vulputate tempus. Ut et orci eu lectus volutpat dapibus eu id lectus. Phasellus venenatis sapien enim, nec efficitur urna mollis a. Cras sed eleifend leo, quis luctus mi. Sed lobortis eleifend quam, at lacinia mi dapibus malesuada.',
                 },
                  applicant_4 : {
                     name : 'Imran Ramsen',
-                    dob : '24/08/1985',
+                    dob : '27/01/1976',
                     experience : 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
                 },
                 applicant_5 : {
                     name : 'Sharon Davies',
-                    dob : '24/08/1986',
+                    dob : '21/04/1980',
                     experience : 'Proin leo sem, tristique ac molestie a, condimentum eget elit. Proin aliquam eget augue eu congue. Ut fermentum dapibus purus, ac varius libero lacinia sed. Etiam lobortis odio neque, eu ullamcorper erat semper id. Mauris sit amet erat lectus. Fusce ornare, massa at sagittis iaculis, mauris massa dapibus nibh, sit amet fringilla diam ligula id massa. In interdum convallis tellus, semper bibendum sapien. Ut ac justo a felis bibendum ultrices non sed justo. Proin tincidunt suscipit erat, et porta urna fermentum nec. Aliquam erat volutpat. Maecenas vitae placerat lectus. Cras non sem vel tortor fringilla finibus. Duis vitae sapien nulla. Maecenas id egestas dolor.',
                 },
                 applicant_6 : {
                     name : 'Michelle Epson',
-                    dob : '24/08/1987',
+                    dob : '04/02/1976',
                     experience : 'Vivamus accumsan mattis lacinia. Sed porta interdum placerat. Integer a tincidunt lorem. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nullam a purus id velit dapibus gravida. Curabitur efficitur ligula vel enim consectetur posuere. Duis porta ut justo sed finibus. Etiam suscipit, nisi a tempus mollis, tortor tellus vulputate felis, eget malesuada odio ante in sem. Fusce posuere aliquet velit, vitae molestie nibh convallis sit amet. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce et faucibus arcu, sed finibus nisl. Integer malesuada vulputate tempus. Ut et orci eu lectus volutpat dapibus eu id lectus. Phasellus venenatis sapien enim, nec efficitur urna mollis a. Cras sed eleifend leo, quis luctus mi. Sed lobortis eleifend quam, at lacinia mi dapibus malesuada.',
                 },
             }

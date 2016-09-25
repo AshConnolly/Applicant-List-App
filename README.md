@@ -9,7 +9,7 @@ Once all node modules have been downloaded, from the project directory run
 ```
 gulp
 ```
-This will use gulp browsersync to create a local express server, it will auto inject any css changes made to main.scss and will auto refresh the page when changes are made to any html or js files. React uses JSX and some es6 is also used, this is transpiled using babel on save.
+This will use gulp browsersync to create a local express server, it will auto inject any CSS changes made to main.scss and will auto refresh the page when changes are made to any HTML or JS files. `main.js` contains react code and this is transpiled using babel on save.
 
 If you wish to inspect the React DOM, you can download [React Developer Tools.](https://facebook.github.io/react/blog/2015/09/02/new-react-developer-tools.html)
 

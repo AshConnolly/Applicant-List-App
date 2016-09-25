@@ -3609,5 +3609,14 @@ label.selectable input {
       float: left;
       width: 100%; } }
 
-.applicant {
-  margin-bottom: 2rem; }
+/*ul*/
+.applicant-list {
+  list-style: none;
+  padding-left: 0; }
+  .applicant-list li {
+    /*a*/ }
+    .applicant-list li .applicant {
+      margin-bottom: 2rem;
+      color: #005ea5;
+      text-decoration: underline;
+      cursor: pointer; }

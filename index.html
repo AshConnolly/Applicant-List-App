@@ -2,141 +2,20 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8" />
-	<title>Document</title>
+	<title>Applicants</title>
 	<link rel="stylesheet" href="dist/css/main.css" />
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.0.1/react.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.0.1/react-dom.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react-router/2.0.0/ReactRouter.min.js"></script>
 
 </head>
 <body>
-	<header role="banner" id="global-header" class="">
-
+	
+	<div id="main">
 		
-		<div class="header-wrapper">
-			<div class="header-global">
-				<div class="header-logo">
-					<a href="https://www.gov.uk" title="Go to the GOV.UK homepage" id="logo" class="content">
-						<img src="https://assets.publishing.service.gov.uk/static/gov.uk_logotype_crown_invert_trans-78910ec0b2d46b9f4933556ba3d6863ca9bbcbefa8a4c811dce36f7026d04de8.png" width="35" height="31" alt=""> GOV.UK
-					</a>
-				</div>
-				<a href="#search" class="search-toggle js-header-toggle">Search</a>
-
-				<form id="search" class="site-search" action="/search" method="get" role="search">
-					<div class="content">
-						<label for="site-search-text">Search</label>
-						<input type="search" name="q" id="site-search-text" title="Search" class="js-search-focus">
-						<input class="submit" type="submit" value="Search">
-					</div>
-				</form>
-
-			</div>
-			
-		</div>
-	</header>
-	
-	<div id="global-header-bar"></div>
-	<div id="global-breadcrumb" class="header-context">
-		<ol class="group">
-			<li><a href="/">Home</a></li>
-		</ol>
 	</div>
-	
-	<div id="page-container">
-
-		<div class="grid-row">
-		<div class="column-three-thirds">
-				<h1>Job applicants</h1>
-			</div>
-		</div>
-
-		<div class="grid-row">
-			<div class="column-two-thirds">
-				<p>	Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-			</div>
-		</div>
 		
-		<div id="react_applicants">		
-		</div>
-
-
-	</div>
-
-	<footer class="group js-footer" id="footer" role="contentinfo">
-
-		<div class="footer-wrapper">
-			<div class="footer-categories">
-				<div class="footer-explore">
-					<h2>Services and information</h2>
-
-					<ul>
-						<li><a href="/browse/benefits">Benefits</a></li>
-						<li><a href="/browse/births-deaths-marriages">Births, deaths, marriages and care</a></li>
-						<li><a href="/browse/business">Business and self-employed</a></li>
-						<li><a href="/browse/childcare-parenting">Childcare and parenting</a></li>
-						<li><a href="/browse/citizenship">Citizenship and living in the UK</a></li>
-						<li><a href="/browse/justice">Crime, justice and the law</a></li>
-						<li><a href="/browse/disabilities">Disabled people</a></li>
-						<li><a href="/browse/driving">Driving and transport</a></li>
-					</ul>
-					<ul>
-						<li><a href="/browse/education">Education and learning</a></li>
-						<li><a href="/browse/employing-people">Employing people</a></li>
-						<li><a href="/browse/environment-countryside">Environment and countryside</a></li>
-						<li><a href="/browse/housing-local-services">Housing and local services</a></li>
-						<li><a href="/browse/tax">Money and tax</a></li>
-						<li><a href="/browse/abroad">Passports, travel and living abroad</a></li>
-						<li><a href="/browse/visas-immigration">Visas and immigration</a></li>
-						<li><a href="/browse/working">Working, jobs and pensions</a></li>
-					</ul>
-				</div>
-
-				<div class="footer-inside-government">
-					<h2>Departments and policy</h2>
-
-					<ul>
-						<li><a href="/government/how-government-works">How government works</a></li>
-						<li><a href="/government/organisations">Departments</a></li>
-						<li><a href="/government/world">Worldwide</a></li>
-						<li><a href="/government/policies">Policies</a></li>
-						<li><a href="/government/publications">Publications</a></li>
-						<li><a href="/government/announcements">Announcements</a></li>
-					</ul>
-				</div>
-				<hr>
-			</div>
-
-
-			<div class="footer-meta">
-				<div class="footer-meta-inner">
-					<h2 class="visuallyhidden">Support links</h2>
-					<ul>
-						<li><a href="/help">Help</a></li>
-						<li><a href="/help/cookies">Cookies</a></li>
-						<li><a href="/contact">Contact</a></li>
-						<li><a href="/help/terms-conditions">Terms and conditions</a></li>
-						<li><a href="/cymraeg" lang="cy" hreflang="cy">Rhestr o Wasanaethau Cymraeg</a></li>
-						<li>Built by the <a href="https://www.gov.uk/government/organisations/government-digital-service">Government Digital Service</a>
-						</li>
-					</ul>
-
-
-
-					<div class="open-government-licence">
-						<p class="logo"><a href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/" rel="license">Open Government Licence</a></p>
-						<p>All content is available under the <a href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/" rel="license">Open Government Licence v3.0</a>, except where otherwise stated</p>
-					</div>
-				</div>
-
-				<div class="copyright">
-					<a href="http://www.nationalarchives.gov.uk/information-management/re-using-public-sector-information/copyright-and-re-use/crown-copyright/">© Crown copyright</a>
-				</div>
-			</div>
-		</div>
-	</footer>
-	
-	
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1-rc1/jquery.js"></script>
-	<script src="js/main.js"></script>
+	<script src="/dist/js/main.js"></script>
 </body>
 </html>

@@ -1,38 +1,39 @@
-var gulp = require('gulp');
-var sass = require('gulp-sass');
-var browserSync = require('browser-sync').create();
+const gulp = require('gulp');
+const sass = require('gulp-sass');
+const concat = require('gulp-concat');
+const browserSync = require('browser-sync').create();
+const babel = require("gulp-babel");
 
-// var paths = {
-// 	mainscss: './assets/css/styles.scss',
-// }
 
-// gulp.task('sass', function () {
-//   return gulp.src('./assets/css/styles.scss', {base: "./"})
-//     .pipe(sass().on('error', sass.logError))
-//     .pipe(gulp.dest('./'))
-//     .pipe(browserSync.stream())
-// });
+function handleError(err) {
+  console.log(err.toString());
+  this.emit('end');
+}
 
 gulp.task('sass', function() {
     return gulp.src("./sass/main.scss")
-        .pipe(sass().on('error', sass.logError)) // Using gulp-sass + error handling
+        .pipe(sass().on('error', sass.logError))
         .pipe(gulp.dest("./dist/css/"))
         .pipe(browserSync.stream());
 });
- 
-gulp.task('watch', function () {
-  gulp.watch('./assets/css/**/*.scss', ['sass']);
- // gulp.watch('./assets/css/**/*.scss', ['sass']);
-});
 
-// Static Server + watching scss/html files
-gulp.task('browserSync', ['sass'], function() {
+gulp.task('js', function() {
+    return gulp.src("./js/main.js")
+    .pipe(babel({
+            presets: ['es2015', 'react']
+        }))
+    .on('error', handleError)
+    .pipe(gulp.dest('./dist/js/'));
+});
+ 
+gulp.task('browserSync', ['sass', 'js'], function() {
 
     browserSync.init({
         server: "./"
     });
 
     gulp.watch("./sass/**/*.scss", ['sass']);
+    gulp.watch("./js/**/*.js", ['js']).on('change', browserSync.reload);
     gulp.watch("./**/*.html").on('change', browserSync.reload);
 });
 

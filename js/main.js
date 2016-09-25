@@ -18,7 +18,7 @@ var MainLayout = React.createClass({
     },*/
     
     renderList : function (key) {
-        return ( <Applicant key={key} index={key} applicantDetails={this.props.route.applicants[key]}/>)
+        return ( <Applicant key={key} index={key} applicantDetails={this.props.route.applicants[key].name}/>)
     },
     
     render: function() {
@@ -49,7 +49,7 @@ var Applicant = React.createClass ({
 	},
     render : function () {
         return(            
-                <li><a className="applicant" onClick={this.goToApplicant}>{this.props.applicantDetails.name}</a></li>       
+                <li><a className="applicant" onClick={this.goToApplicant}>{this.props.applicantDetails}</a></li>       
            
         )
     }

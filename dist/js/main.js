@@ -21,7 +21,7 @@ var MainLayout = React.createClass({
      },*/
 
 	renderList: function renderList(key) {
-		return React.createElement(Applicant, { key: key, index: key, applicantDetails: this.props.route.applicants[key] });
+		return React.createElement(Applicant, { key: key, index: key, applicantDetails: this.props.route.applicants[key].name });
 	},
 
 	render: function render() {
@@ -67,7 +67,7 @@ var Applicant = React.createClass({
 			React.createElement(
 				"a",
 				{ className: "applicant", onClick: this.goToApplicant },
-				this.props.applicantDetails.name
+				this.props.applicantDetails
 			)
 		);
 	}
